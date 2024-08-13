@@ -11,6 +11,20 @@ def get_location_address(latitude: str, longitude: str) -> str:
         return location.address
 
 
+def get_fullname(user: User) -> str:
+    if user.first_name and user.last_name:
+        return f"{user.first_name} {user.last_name} (@{user.username})"
+    
+    elif user.first_name and user.username:
+        return f"{user.first_name} (@{user.username})"
+
+    elif user.username:
+        return f"@{user.username}"
+    
+    else:
+        return f"Анонимный ({user.id})"
+
+
 def user_info(user: User) -> str:
     username = ""
 
@@ -188,3 +202,20 @@ def message_update(message: Message):
         f"Изменено на: {message.text}"
     )
     return user_info(message.from_user) + chat_info(message.chat) + caption
+
+
+def user_status_update(user: User):
+    caption = (
+        f"Статус пользователя:\n"
+        f"Имя: {get_fullname(user)}\n"
+    )
+    
+    if user.next_offline_date:
+        return caption + \
+            f"Статус: {user.status.value} 🟢\n\n" + \
+            f"#ID{user.id}\n\n"
+        
+    return caption + \
+        f"Статус: {user.status.value} 🔴\n" + \
+        f"Дата последнего онлайна: {user.last_online_date}\n\n" + \
+        f"#ID{user.id}\n\n"

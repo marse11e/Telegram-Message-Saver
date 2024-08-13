@@ -12,6 +12,7 @@ USERNAME = CONFIG.get('account', 'username')
 PHONE = CONFIG.get('account', 'phone')
 PASSWORD = CONFIG.get('account', 'password')
 CANNEL_ID = CONFIG.get('account', 'channel_id')
+CANNEL_2_ID = CONFIG.get('account', 'channel_2_id')
 # USER_ID = CONFIG.getint('account', 'user_id')
 
 # Test
