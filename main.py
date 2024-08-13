@@ -34,7 +34,7 @@ APP = Client(name=USERNAME, api_id=API_ID, api_hash=API_HASH,
 
 
 @APP.on_message(filters=filters.private)
-async def my_handler(client: Client, message: Message):
+async def my_handler_message(client: Client, message: Message):
     print(message)
     
     if message.text:
@@ -85,13 +85,18 @@ async def my_handler(client: Client, message: Message):
 
 
 @APP.on_deleted_messages()
-async def my_handler(client: Client, message: Message):
+async def my_handler_deleted_messages(client: Client, message: Message):
     await client.send_message(CANNEL_ID, text=message_deleted(message))
 
 
 @APP.on_edited_message()
-async def my_handler(client: Client, message: Message):
+async def my_handler_edited_message(client: Client, message: Message):
     await client.send_message(CANNEL_ID, text=message_update(message))
+
+
+@APP.on_user_status()
+async def my_handler_user_status(client: Client, message: Message):
+    print(message)
 
 
 if __name__ == '__main__':
