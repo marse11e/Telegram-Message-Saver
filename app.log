@@ -1,0 +1,16 @@
+2024-08-13 08:06:49,329 - __main__ - INFO - Starting the application...
+2024-08-13 08:06:49,508 - pyrogram.connection.connection - INFO - Connecting...
+2024-08-13 08:06:49,657 - pyrogram.connection.connection - INFO - Connected! Production DC2 - IPv4
+2024-08-13 08:06:49,657 - pyrogram.session.session - INFO - NetworkTask started
+2024-08-13 08:06:50,232 - pyrogram.session.session - INFO - Session initialized: Layer 158
+2024-08-13 08:06:50,233 - pyrogram.session.session - INFO - Device: CPython 3.11.6 - Pyrogram 2.0.106
+2024-08-13 08:06:50,233 - pyrogram.session.session - INFO - System: Linux 6.5.0-44-generic (en)
+2024-08-13 08:06:50,233 - pyrogram.session.session - INFO - Session started
+2024-08-13 08:06:50,234 - pyrogram.session.session - INFO - PingTask started
+2024-08-13 08:06:50,494 - pyrogram.dispatcher - INFO - Started 12 HandlerTasks
+2024-08-13 08:11:26,218 - root - INFO - Stop signal received (SIGINT). Exiting...
+2024-08-13 08:11:30,499 - pyrogram.dispatcher - INFO - Stopped 12 HandlerTasks
+2024-08-13 08:11:30,500 - pyrogram.session.session - INFO - PingTask stopped
+2024-08-13 08:11:30,500 - pyrogram.connection.connection - INFO - Disconnected
+2024-08-13 08:11:30,500 - pyrogram.session.session - INFO - NetworkTask stopped
+2024-08-13 08:11:30,501 - pyrogram.session.session - INFO - Session stopped

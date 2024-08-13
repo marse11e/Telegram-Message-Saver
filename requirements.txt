@@ -1,0 +1,6 @@
+geographiclib==2.0
+geopy==2.4.1
+pyaes==1.6.1
+Pyrogram==2.0.106
+PySocks==1.7.1
+TgCrypto==1.2.5
